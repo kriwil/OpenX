@@ -1030,6 +1030,7 @@ class SqlBuilder
                     if (isset($aParams['exclude'])) $aGroupColumns = array_diff($aGroupColumns, $aParams['exclude']);
                     if ($aParams['market_stats']) {
                         $aGroupColumns = array_diff($aGroupColumns, array('ad_id'));
+                        $aGroupColumns[] = 'ad_id';
                         $aGroupColumns[] = 'pkey';
                     }
                 }
